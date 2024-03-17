@@ -15,7 +15,7 @@
 - Screenshots displaying the results of entering various news articles and the results that the program gives. 
 
 # Usage:
-- User enters a piece of news text into the website.
+- User enters a piece of news text (as text, not a file) into the website submission textbox on the submissions page.
 - Program analyzes and returns the probability that the news text is fake.
 
 # Contributions:
