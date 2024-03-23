@@ -3,6 +3,18 @@ html {
   width: 100%;
   background-color: lavenderblush;
 
+  .header {
+    text-align: center;
+  }
+
+  .dispimg {
+    text-align: center;
+  }
+
+  .body {
+    text-align: center;
+  }
+
   /* Add a black background color to the top navigation */
   .topnav {
     background-color: #333;
