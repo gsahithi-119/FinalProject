@@ -15,6 +15,48 @@ html {
     text-align: center;
   }
 
+  .contact {
+    text-align: center;
+    
+  }
+
+  .sname {
+    text-align: left;
+  }
+
+  .sahithi {
+    text-align: left;
+  }
+
+  /* insert when I get an image from sahithi 
+  .simg {
+    text-align: right;
+  }
+*/
+  .cname{
+    text-align: right;
+    padding: 12px 20px;
+  }
+
+  .chloe {
+    text-align: right; 
+    padding: 12px 20px;
+  }
+
+  .cimg {
+    text-align: right;
+    padding: 12px 20px;
+  }
+  
+
+  .entry {
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
   /* Add a black background color to the top navigation */
   .topnav {
     background-color: #333;
