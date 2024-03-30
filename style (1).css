@@ -1,7 +1,26 @@
+
+
 html {
+
   height: 100%;
   width: 100%;
   background-color: lavenderblush;
+
+  h1, h2, h3, h4, h5, h6, p {
+      font-family: 'Corben', Georgia, Times, serif;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 
   .header {
     text-align: center;
@@ -9,6 +28,35 @@ html {
 
   .dispimg {
     text-align: center;
+    
+  }
+  
+  img{
+      border-radius: 12px;
+  }
+
+  textarea[type=text] {
+    padding-top: 0;
+    padding-left: 0;
+    float: center;
+    width: 500px;
+    text-align:left;
+    
+  }
+
+  input[type=submit]{
+    font-family: 'Corben', Georgia, Times, serif;
+    cursor: pointer;
+    height: 75px;
+    width: 250px;
+    font-size: 20px;
+    background-color: #333;
+    color: #f2f2f2;
+  }
+
+  input[type=submit]:hover {
+    background-color: #ddd;
+    color: black;
   }
 
   .body {
@@ -25,22 +73,27 @@ html {
   }
 
   .sahithi {
-    text-align: left;
+    width:30%;
+    text-align:left;
+    float: left;
+    padding: 12px;
   }
 
-  /* insert when I get an image from sahithi 
-  .simg {
-    text-align: right;
+  .simg{
+    text-align: left;
+    padding: 12px 20px;
   }
-*/
+
   .cname{
     text-align: right;
-    padding: 12px 20px;
+    padding: 12px 12px;
   }
 
   .chloe {
-    text-align: right; 
-    padding: 12px 20px;
+    width:30%;
+    text-align:right;
+    float: right;
+    padding: 12px;
   }
 
   .cimg {
@@ -71,6 +124,7 @@ html {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Corben', Georgia, Times, serif;
     font-size: 17px;
   }
 
