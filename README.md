@@ -1,9 +1,18 @@
 # FinalProject
 
+# To Do
+- Ensure that Python is installed
+- Ensure that the following Python libraries are installed: Pandas, Matplotlib, SKLearn, numpy, transformers, torch
+- Download the project code from the repo and unzip the file
+- Run the project in Spyder or a similar IDE
+- A link starting with 'http://' will be returned in the console; go to that link
+- In the website, navigate to the "Test" tab
+- Enter the text in the text box and see the results
+
 # Objectives:
 - To design and implement a website that allows the user to upload a news article and then informs the user the probability (percentage) that 
   the given article is fake news. 
-- Current goal of ~70% accuracy. 
+- Reach approximately 70% accuracy with hte model. 
 - To learn how to use and understand machine learning models, understand pandas, matplotlib, pytorch, tensorflow. 
 - To learn how to implement a website using HTML/CSS/JavaScript on replit. 
 - To practice using Object Oriented Programming style. 
