@@ -31,3 +31,25 @@ X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.
 model_name = "distilbert-base-uncased-finetuned-sst-2-english"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
+
+# Create class News
+class News(Dataset):
+    def __init__(self, encodings, labels):
+        self.encodings = encodings
+        self.labels = labels
+    # convert to pytorch tensors
+    def __getitem__(self, idx):
+        item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+        item['labels'] = torch.tensor(self.labels[idx])
+        return item 
+    def __len__(self):
+        return len(self.labels)
+
+sample_texts = [str(text) for text in X_train[:5]]
+
+# Error handling
+try:
+    sample_encodings = tokenizer(sample_texts, truncation=True, padding=True)
+    print("Sample tokenization successful:", sample_encodings.keys())
+except Exception as e:
+    print("Detailed Error during tokenization:", e)
