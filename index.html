@@ -5,31 +5,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Contact</title>
+  <title>Home</title>
   <link href="/static/style.css" rel="stylesheet" type="text/css" />
-</head>
+</head
+
 <body>
 
   <!-- the navbar-- consistant throughout the website-->
   <!-- current page link is set to active --> 
   <div class="topnav">
-    <a href="index.html">Home</a>
+    <a class="active" href="index.html">Home</a>
     <a href="test.html">Test</a>
-    <a class="active" href="contact.html">Contact</a>
+    <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 
   </div>
-
   <!--header of the website, consistent throughout --> 
+  <!-- has author's names below title bc home page  -->
   <div class = "header">
     <h1>Fake News Detector</h1>
+    <h5>Created by Sahithi Gollakota and Chloe Bright</h5>
   </div>
-
-  <div class = "contact"> 
-    <h2>Questions or Concerns? Contact Us!</h2>
-    <p> Email us at: bright.chl@northeastern.edu or gollakota.s@northeastern.edu</p>
+  <div class = "dispimg">
+    <img src="/static/fakenewsimg1.jpg" alt="stack of newspapers" width="600" height="400">
   </div>
-
+  <div class = "body">
+    <p> This website contains a program that can detect how likely news is to be fake using machine learning on a python program.</p>
+    <p> Click on the "Test" tab to paste your news text into our website and see how likely it is to be fake or real!</p>
+  </div>
 
    <!--runs js from the js script file on this page -->
   <script src="/static/script.js"></script>

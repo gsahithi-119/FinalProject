@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 
+   <!-- head-- uses style.css for styling   -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Testing Page</title>
+  <link href="/static/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+
+  <!-- the navbar-- consistent throughout the website-->
+  <!-- current page link is set to active --> 
   <div class="topnav">
     <a href="index.html">Home</a>
     <a class="active" href="test.html">Test</a>
@@ -15,29 +19,33 @@
     <a href="about.html">About</a>
 
   </div>
+  
+  <!--header of the website, consistent throughout -->
   <div class = "header">
     <h1>Fake News Detector</h1>
   </div>
 
+  <!-- portion of page w/ instructions on submission  -->
   <div class = "instructions">
     <h2>How to Use</h2>
     <p> Paste in the text of a news article in the entry box below. When you are ready to see your results, hit the "submit" button!</p>
   </div>
 
+
+
+  <!-- The form where news text is submitted --> 
   <div class = "entry">
-    <form name="F">
-      <p>Enter News Sample:</p>
-      <p><textarea type = "text" name = "news" id = "input" placeholder="Enter your news sample here..."/></textarea></p>
-      <p><input type = "submit" value = "Submit Your News!"/></p>
-      
+    <form name = "F" method="POST" action="/results.html"> <!-- gives form a name, method, and action -->
+      Enter News Sample: <br> <!-- title for the submission area  -->
+      <p><textarea type = "text" name = "news" id = "news" rows = "5" cols = "60" placeholder="Enter your news sample here..." required></textarea></p> <!-- sets dimensions, placeholder text, type, name and id for the text area and makes it required -->
+      <p><input type = "submit" value = "Submit Your News!"/></p> <!--button to submit the form -->
+
     </form>
   </div>
 
 
-  <div class = "results">
-    <h4 id = "h4"> RESULTS </h4>
-  </div>
-    
+
+  <!--runs js from the js script file on this page -->
   <script src="script.js"></script>
 </body>
 
