@@ -53,3 +53,45 @@ try:
     print("Sample tokenization successful:", sample_encodings.keys())
 except Exception as e:
     print("Detailed Error during tokenization:", e)
+
+
+# split dataset into testing and training sets
+train_dataset = News(X_train.tolist(), label_train.tolist())
+val_dataset = News(X_val.tolist(), label_val.tolist())
+test_dataset = News(X_test.tolist(), label_test.tolist())
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=5,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
+    warmup_steps=0,
+    learning_rate=5e-5,
+    weight_decay=0.01,
+    logging_dir="./logs",
+    evaluation_strategy="steps",
+    eval_steps=100,
+    logging_steps=100,
+)
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=val_dataset,
+    #compute_metrics=compute_metrics
+)
+
+text = ""
+inputs = tokenizer(text, return_tensors="pt")
+
+with torch.no_grad():
+    logits = model(**inputs).logits
+
+probs = F.softmax(logits, dim=-1)
+
+print(type(probs))
+prediction = torch.argmax(probs, dim=-1).item()
+
+labels = ['Fake News', 'Real News']
+print(f"This looks like {labels[prediction]}!")
